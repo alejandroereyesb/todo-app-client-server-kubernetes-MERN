@@ -10,7 +10,8 @@ COPY ./public ./public
 
 COPY ./src ./src
 
-ENV REACT_APP_baseAPIURL=<backend-app-service-ip>:<port>
+ENV REACT_APP_baseAPIURL=http://192.168.49.2:30516
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 RUN yarn build
 
