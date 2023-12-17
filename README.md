@@ -38,10 +38,12 @@ Check general info
 > kubectl get deploy
 
 Open website portal. Example: `http://192.168.49.2:32608/`
+NOTE: you need to activate CORS in google Chrome to connect with the API
 > minikube_ip:port_web_service
 
+
 To scale up or down front-end application
-> kubectl scale deploy todo-client-app-deploy --replicas=<count>
+> kubectl scale deploy todo-client-app-deploy --replicas=2
 
 To scale up or down backend application
-> kubectl scale deploy todo-server-app-deploy --replicas=<count>
+> kubectl scale deploy todo-server-app-deploy --replicas=5
